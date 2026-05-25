@@ -48,15 +48,16 @@ const server = http.createServer(async (req, res) => {
 
 server.listen(PORT, () => console.log(`Server running on ${PORT}`));
 
+/* ---------------- This example explains how to work with query parameter ------------------ */
 
-// import http from "node:http"
+/* 
+import http from "node:http"
+const server = http.createServer((req, res) => {
+  const urlObj = new URL(req.url, `http://${req.headers.host}`)
+  const queryParams = Object.fromEntries(urlObj.searchParams)
+  console.log(queryParams)
+})
+server.listen(8000, () => console.log('conncted')) 
+*/
 
-// const server = http.createServer((req, res) => {
-
-//   const urlObj = new URL(req.url, `http://${req.headers.host}`)
-//   const queryParams = Object.fromEntries(urlObj.searchParams)
-
-//   console.log(queryParams)
-// })
-
-// server.listen(8000, () => console.log('conncted'))
+/* ---------------- This example explains how to work with query parameter ------------------ */
