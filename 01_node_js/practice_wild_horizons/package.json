@@ -1,0 +1,13 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Practice Node.js API project",
+  "license": "ISC",
+  "author": "Yash Vimal",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  }
+}
