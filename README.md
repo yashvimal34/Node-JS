@@ -4,63 +4,59 @@ Welcome to my Node-JS repository! This project is a collection of Node.js applic
 
 ## 📋 Project Overview
 
-This repository contains Node.js applications and web development projects. The codebase is primarily composed of:
+This repository contains Node.js applications and web development projects organized into practice sets and real-world implementations.
 
-- **JavaScript (69.1%)** - Core application logic and Node.js backend code
-- **HTML (18.4%)** - Frontend markup and user interface
-- **CSS (12.5%)** - Styling and responsive design
+## 🎯 What I've Done
 
-## 🚀 What I'm Currently Doing
+### Completed Projects:
 
-### Current Focus Areas:
-- Building server-side applications with Node.js
-- Developing full-stack web applications
-- Creating RESTful APIs
-- Learning and implementing best practices in JavaScript
-- Building responsive and interactive web interfaces
-- Working with HTML/CSS for frontend development
+#### **01_node_js** - Core Node.js Learning
+- **server.js** - Express server implementation with routing and request handling
+- **data/** - Data management and file handling utilities
+- **database/** - Database connection and query modules
+- **utils/** - Helper functions and utilities
+- **practice_wild_horizons/** - First practice set for building web applications
+- **practice_set_2_wild_horizons/** - Advanced practice set with enhanced features
 
-### Current Projects:
-- Exploring Node.js fundamentals and ecosystem
-- Implementing middleware and routing
-- Database integration and management
-- Frontend-backend integration
+#### **02_node_js** - File Serving & Static Content
+- **server.js** - Node.js server for serving static files and HTML content
+- **public/** - Static files (HTML, CSS, JavaScript) served by the server
+- **utils/** - Utility functions for file operations
+- **another_set_to_serve_files/** - Additional file serving implementations
 
-## 🔮 Future Plans
-
-### Short-term Goals:
-- [ ] Implement authentication and authorization systems
-- [ ] Add database integration (MongoDB, PostgreSQL)
-- [ ] Create comprehensive API documentation
-- [ ] Build more complex full-stack applications
-- [ ] Implement error handling and logging
-
-### Long-term Goals:
-- [ ] Deploy applications to production environments
-- [ ] Learn and implement advanced Node.js patterns
-- [ ] Explore microservices architecture
-- [ ] Integrate frontend frameworks (React, Vue, or Angular)
-- [ ] Implement testing frameworks (Jest, Mocha)
-- [ ] Add CI/CD pipelines for automated deployment
-- [ ] Contribute to open-source projects
-- [ ] Build scalable and maintainable applications
-
-### Technology Stack to Explore:
-- **Backend:** Express.js, Fastify, NestJS
-- **Database:** MongoDB, PostgreSQL, Redis
-- **Testing:** Jest, Mocha, Chai
-- **Deployment:** Docker, Kubernetes, AWS/Heroku
-- **Frontend Frameworks:** React, Vue.js
-- **DevOps:** GitHub Actions, Jenkins
+### Skills & Technologies Implemented:
+- ✅ Node.js fundamentals and core modules
+- ✅ Express.js server setup and routing
+- ✅ Static file serving (HTML, CSS, JavaScript)
+- ✅ Request/response handling
+- ✅ File system operations
+- ✅ Database integration basics
+- ✅ Utility function development
+- ✅ Project structure and organization
 
 ## 📁 Repository Structure
 
 ```
 Node-JS/
-├── README.md
-├── [project folders...]
-├── [source code files...]
-└── [documentation...]
+├── 01_node_js/                          # Core Node.js Learning
+│   ├── server.js                        # Express server implementation
+│   ├── package.json                     # Project dependencies
+│   ├── README.md                        # Project documentation
+│   ├── data/                            # Data management modules
+│   ├── database/                        # Database modules
+│   ├── utils/                           # Utility functions
+│   ├── practice_wild_horizons/          # First practice set
+│   └── practice_set_2_wild_horizons/    # Advanced practice set
+│
+├── 02_node_js/                          # File Serving Implementation
+│   ├── server.js                        # File serving server
+│   ├── package.json                     # Project dependencies
+│   ├── README.md                        # Project documentation
+│   ├── public/                          # Static files
+│   ├── utils/                           # Utility functions
+│   └── another_set_to_serve_files/      # Additional implementations
+│
+└── README.md                            # Main repository documentation
 ```
 
 ## 🛠️ Getting Started
@@ -70,21 +66,53 @@ Node-JS/
 - npm or yarn package manager
 
 ### Installation
+
+**For 01_node_js:**
 ```bash
-# Clone the repository
-git clone https://github.com/yashvimal34/Node-JS.git
-
-# Navigate to the project directory
-cd Node-JS
-
-# Install dependencies
+cd 01_node_js
 npm install
-```
-
-### Running the Application
-```bash
 npm start
 ```
+
+**For 02_node_js:**
+```bash
+cd 02_node_js
+npm install
+npm start
+```
+
+## 🚀 Current Focus Areas
+- Building server-side applications with Node.js
+- Implementing routing and middleware
+- Serving static files and content
+- Database integration and management
+- Creating RESTful APIs
+
+## 🔮 Future Plans
+
+### Short-term Goals:
+- [ ] Implement authentication and authorization systems
+- [ ] Add MongoDB/PostgreSQL integration
+- [ ] Create comprehensive API documentation
+- [ ] Build more complex full-stack applications
+- [ ] Implement error handling and logging
+
+### Long-term Goals:
+- [ ] Deploy applications to production environments
+- [ ] Learn and implement advanced Node.js patterns
+- [ ] Explore microservices architecture
+- [ ] Integrate frontend frameworks (React, Vue)
+- [ ] Implement testing frameworks (Jest, Mocha)
+- [ ] Add CI/CD pipelines
+- [ ] Contribute to open-source projects
+
+### Technology Stack to Explore:
+- **Backend:** Express.js, Fastify, NestJS
+- **Database:** MongoDB, PostgreSQL, Redis
+- **Testing:** Jest, Mocha, Chai
+- **Deployment:** Docker, Kubernetes, AWS/Heroku
+- **Frontend Frameworks:** React, Vue.js
+- **DevOps:** GitHub Actions, Jenkins
 
 ## 📚 Learning Resources
 
