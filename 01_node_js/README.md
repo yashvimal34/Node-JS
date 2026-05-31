@@ -1,21 +1,18 @@
 # Wild Horizons Node.js API
 
-Wild Horizons is a beginner-friendly Node.js project that builds a small HTTP API without Express. It uses Node's built-in `http` module to serve a collection of unusual travel destinations and lets users filter the data by route parameters and query parameters.
+Wild Horizons is a beginner-friendly Node.js project that builds a small HTTP API without Express. It uses Node's built-in `http` module to serve an array of haunted travel destinations and lets users filter the data by route parameters and query parameters.
 
-This project is useful because it shows how a backend server works at a lower level before using frameworks like Express.
+This project is useful because it shows how a backend server works at a lower level before using server frameworks like Express.
 
-## What We Have Built
+## Features
 
-We have created a simple API server that:
-
-- Starts a Node.js HTTP server.
-- Reads destination data from a local data file through a database-like function.
-- Sends JSON responses to the client.
-- Handles different API routes.
-- Filters data by continent and country.
-- Filters data using query parameters.
-- Organizes logic into separate utility modules.
-- Uses ES module syntax with `import` and `export`.
+- Simple Node.js HTTP server using `http.createServer()`
+- Modular helper structure with a data layer, route handlers, and response utilities
+- Static destination data loaded from `data/data.js`
+- JSON responses sent with the correct `Content-Type`
+- Filtering by route parameters like `continent` and `country`
+- Filtering by query parameters like `continent`, `country`, and `is_open_to_public`
+- ES module syntax using `import` / `export`
 
 ## Project Structure
 
@@ -34,38 +31,33 @@ We have created a simple API server that:
 `-- README.md
 ```
 
-## File-by-File Explanation
+## How to run
+
+1. Open a terminal in `01_node_js`
+2. Run:
+
+```bash
+npm install
+npm start
+```
+
+3. Visit `http://localhost:8000` in your browser.
+
+## Main files
 
 ### `server.js`
 
-This is the main entry point of the application.
+The server entry point.
 
-It does the following:
-
-- Imports Node's built-in `http` module.
-- Imports helper functions from other files.
-- Creates an HTTP server using `http.createServer()`.
-- Reads the request object `req` and response object `res`.
-- Gets destination data from `getDataFromDB()`.
-- Creates a URL object to read the pathname and query parameters.
-- Checks which route the user requested.
-- Sends the correct filtered data as JSON.
-- Sends a `404` response when the route does not exist.
-- Starts the server on port `8000`.
-
-Important line:
-
-```js
-const server = http.createServer(async (req, res) => {
-```
-
-This creates a server. Every time a request comes in, this callback runs.
+- Creates an HTTP server
+- Parses the request URL and query string
+- Loads destination data from the database layer
+- Routes requests to the correct handler
+- Sends JSON responses or a 404 when a route is not found
 
 ### `data/data.js`
 
-This file stores the destination data.
-
-The data is an array of objects. Each object represents one destination and contains fields like:
+Holds an array of destination objects. Each object has:
 
 - `name`
 - `location`
@@ -75,129 +67,60 @@ The data is an array of objects. Each object represents one destination and cont
 - `uuid`
 - `details`
 
-Example shape:
-
-```js
-{
-  name: "Waitomo Glowworm Caves",
-  location: "Waitomo",
-  country: "New Zealand",
-  continent: "Oceania",
-  is_open_to_public: true,
-  uuid: "550e8400-e29b-41d4-a716-446655440001",
-  details: [
-    {
-      fun_fact: "The glowworms create a star-like effect on the cave ceiling using bioluminescence."
-    },
-    {
-      description: "A subterranean network of limestone caverns famous for its magical boat rides under twinkling glowworm-lit ceilings."
-    }
-  ]
-}
-```
+This is the sample dataset used by the API.
 
 ### `database/db.js`
 
-This file acts like a simple database layer.
+Acts as a simple data access layer.
 
 ```js
 export async function getDataFromDB() {
-    return data;
+  return data;
 }
 ```
 
-Right now, it returns local data from `data.js`. We made it `async` because real database calls usually take time and return promises.
-
-This teaches an important backend idea: the server should not care where the data comes from. Today it comes from a local file; later it could come from MongoDB, PostgreSQL, MySQL, or an external API.
+It is async to mimic real database behavior.
 
 ### `utils/sendJSONdata.js`
 
-This helper sends JSON responses.
+Sends a JSON response with proper headers.
 
 ```js
-export const sendJSON = ((res, statusCode, payload) => {
-    res.setHeader('Content-Type', 'application/json')
-    res.statusCode = statusCode
-    res.end(JSON.stringify(payload))
-})
+export const sendJSON = (res, statusCode, payload) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.statusCode = statusCode;
+  res.end(JSON.stringify(payload));
+};
 ```
-
-It does three important things:
-
-- Sets the response type to JSON.
-- Sets the HTTP status code.
-- Converts JavaScript data into a JSON string using `JSON.stringify()`.
-
-Without `JSON.stringify()`, Node cannot directly send a JavaScript object as an HTTP response body.
 
 ### `utils/filterData.js`
 
-This helper filters data by a specific property.
+Filters the destination data by a dynamic property.
+
+Example:
 
 ```js
-export const filteringData = (data, locationType, locationName) => {
-    return data.filter((destination) => {
-      return destination[locationType].toLowerCase() === locationName.toLowerCase();
-    });
-}
-```
-
-Example usage:
-
-```js
-filteringData(destinations, 'continent', 'Asia')
-filteringData(destinations, 'country', 'India')
-```
-
-Important concept:
-
-```js
-destination[locationType]
-```
-
-This is dynamic property access. It allows us to choose the object key using a variable.
-
-For example, if `locationType` is `"continent"`, then:
-
-```js
-destination[locationType]
-```
-
-means:
-
-```js
-destination["continent"]
+filteringData(destinations, 'continent', 'Asia');
 ```
 
 ### `utils/getDataByQueryParams.js`
 
-This helper filters data using query parameters.
+Filters data using URL query parameters.
 
-It currently supports:
-
-- `continent`
-- `country`
-- `is_open_to_public`
-
-Example URL:
+Example request:
 
 ```text
 http://localhost:8000/api?continent=Asia&country=India&is_open_to_public=true
 ```
 
-The function checks which query parameters exist and applies filters one by one.
+## Learning outcomes
 
-Important part:
+- Build a Node.js HTTP server without Express
+- Use modular code structure for server, data, and utilities
+- Work with URL routing and query parameters
+- Send JSON responses from Node
+- Use ES module syntax in Node.js
 
-```js
-const {continent, country, is_open_to_public} = queryObj
-```
-
-This uses destructuring to extract values from an object.
-
-Another important part:
-
-```js
 JSON.parse(is_open_to_public.toLowerCase())
 ```
 
