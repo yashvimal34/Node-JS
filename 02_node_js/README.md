@@ -47,6 +47,13 @@ npm start
 - How to use custom helper modules for response handling and content types
 - How to build a multi-page static site with animated styling
 - How to add a static contact form that shows a client-side confirmation message
+- How to collect form values at submit time and send them as JSON in a POST request
+- How to fix an empty POST payload by making the submit handler async and building the body from input values
+- How to parse JSON request bodies in Node.js using stream chunks and `JSON.parse()`
+- How to handle `/api` routes separately from static page requests in the server router
+- How to resolve ESM import paths by including `.js` extensions in relative imports
+- How to debug invalid `fs.writeFile()` arguments by verifying the path is a string, not an array or object
+- How to render dynamic card content on the about page with images, preview text, and a read-more toggle
 
 ## Site features
 
