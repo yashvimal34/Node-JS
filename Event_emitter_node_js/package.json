@@ -1,0 +1,13 @@
+{
+  "name": "event_emitter_node_js",
+  "version": "1.0.0",
+  "description": "Learning Node.js EventEmitter with practical example",
+  "license": "ISC",
+  "author": "Yash Vimal",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  }
+}
