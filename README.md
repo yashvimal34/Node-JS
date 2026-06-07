@@ -83,7 +83,7 @@ npm start
 
 ## 🚀 Current Focus Areas
 - Building server-side applications with Node.js
-- Implementing routing and middleware
+- Implementing routing
 - Serving static files and content
 - Database integration and management
 - Creating RESTful APIs
