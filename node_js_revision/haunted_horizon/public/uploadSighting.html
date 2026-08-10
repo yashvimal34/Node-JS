@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/">Home Page</a>
+    <a href="/about.html">About Page</a>
+    <a href="/uploadSighting.html">Add Sighting Page</a>
+
+    <form id="sightingForm">
+        <label>Title</label>
+        <input type="text" id="title">
+
+        <label>Time/Date</label>
+        <input type="date" id="time">
+
+        <label>Location</label>
+        <input type="text" id="location">
+
+        <label>Details</label>
+        <input type="text" id="details">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="sightingOutput"></div>
+
+    <script src="sightingUpload.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "node_js_revision",
+  "version": "1.0.0",
+  "description": "node js",
+  "license": "ISC",
+  "author": "Yash Vimal",
+  "type": "module",
+  "main": "\\",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
