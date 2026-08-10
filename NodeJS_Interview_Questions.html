@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Node.js Interview Questions - Basic to Advanced</title>
+  <style>
+    @page { margin: 18mm; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #202124;
+      line-height: 1.45;
+      font-size: 11.5pt;
+    }
+    h1 {
+      font-size: 24pt;
+      margin: 0 0 8px;
+      color: #111827;
+    }
+    h2 {
+      font-size: 15pt;
+      margin: 24px 0 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #d1d5db;
+      color: #1f2937;
+      page-break-after: avoid;
+    }
+    h3 {
+      font-size: 12pt;
+      margin: 16px 0 6px;
+      color: #374151;
+      page-break-after: avoid;
+    }
+    p { margin: 6px 0 10px; }
+    .subtitle {
+      font-size: 12pt;
+      color: #4b5563;
+      margin-bottom: 18px;
+    }
+    .meta {
+      background: #f3f4f6;
+      border-left: 4px solid #2563eb;
+      padding: 10px 12px;
+      margin: 14px 0 20px;
+    }
+    ol { margin-top: 6px; padding-left: 22px; }
+    li { margin: 6px 0; }
+    code {
+      font-family: Consolas, Monaco, monospace;
+      background: #f3f4f6;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+    .answer {
+      color: #4b5563;
+      margin: 2px 0 9px 0;
+    }
+    .section {
+      page-break-inside: avoid;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 9pt;
+      color: #1d4ed8;
+      background: #dbeafe;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Node.js Interview Questions</h1>
+  <p class="subtitle">Basic to advanced questions based on the <code>complete_node_js</code> learning projects.</p>
+  <div class="meta">
+    <strong>Projects covered:</strong> Core Node.js HTTP server, REST API routing, query parameters, static file serving, JSON body parsing, file-system persistence, event emitters, environment variables, and MongoDB/Mongoose connection.
+  </div>
+
+  <h2>1. Basic Node.js Fundamentals <span class="badge">Beginner</span></h2>
+  <ol>
+    <li>What is Node.js, and why is it used for backend development?</li>
+    <li>What is the difference between JavaScript running in the browser and JavaScript running in Node.js?</li>
+    <li>What are Node.js core modules? Give examples from your project.</li>
+    <li>Why did you import modules like <code>node:http</code>, <code>node:path</code>, <code>node:fs/promises</code>, and <code>node:events</code>?</li>
+    <li>What is the purpose of <code>package.json</code> in a Node.js project?</li>
+    <li>Why did you use <code>"type": "module"</code> in your package file?</li>
+    <li>What is the difference between CommonJS and ES Modules?</li>
+    <li>What does <code>npm start</code> do in your projects?</li>
+    <li>What is the use of <code>node --watch server.js</code> during development?</li>
+    <li>What is a callback function? Where do you see callback-style behavior in Node.js?</li>
+  </ol>
+
+  <h2>2. HTTP Server and Request Handling <span class="badge">Beginner to Intermediate</span></h2>
+  <ol>
+    <li>How do you create a server using the native <code>http</code> module?</li>
+    <li>What are <code>req</code> and <code>res</code> in <code>http.createServer()</code>?</li>
+    <li>What happens when the browser sends a request to <code>localhost:8000</code>?</li>
+    <li>Why does the server need to call <code>res.end()</code>?</li>
+    <li>What is the purpose of <code>server.listen(PORT)</code>?</li>
+    <li>How do you set the HTTP status code in Node.js?</li>
+    <li>How do you set response headers such as <code>Content-Type</code>?</li>
+    <li>What is the difference between sending plain text, JSON, HTML, CSS, and image responses?</li>
+    <li>Why should a route return a 404 response when no route matches?</li>
+    <li>How would you explain your <code>sendResponse()</code> or <code>sendJSON()</code> helper?</li>
+  </ol>
+
+  <h2>3. Routing and URL Handling <span class="badge">Intermediate</span></h2>
+  <ol>
+    <li>How did you manually implement routing without Express?</li>
+    <li>What is the difference between <code>req.url</code> and a parsed <code>URL</code> object?</li>
+    <li>Why did you create <code>new URL(req.url, baseUrl)</code>?</li>
+    <li>What is the difference between <code>pathname</code> and query parameters?</li>
+    <li>How does <code>Object.fromEntries(url.searchParams)</code> help with filtering?</li>
+    <li>How did you handle routes like <code>/api/country/:country</code> or <code>/api/name/:name</code>?</li>
+    <li>Why did you use <code>decodeURIComponent()</code> for route values with spaces?</li>
+    <li>What is the difference between path parameters and query parameters?</li>
+    <li>When should you use <code>/api/country/India</code> versus <code>/api?country=India</code>?</li>
+    <li>How would you add a new route such as <code>/api/continent/:continent</code>?</li>
+  </ol>
+
+  <h2>4. REST API Concepts <span class="badge">Intermediate</span></h2>
+  <ol>
+    <li>What is a REST API?</li>
+    <li>What is the purpose of your <code>GET /api</code> route?</li>
+    <li>What is the purpose of your <code>POST /api</code> route?</li>
+    <li>Why should <code>POST</code> usually return status code <code>201</code> when data is created?</li>
+    <li>What is the difference between <code>200</code>, <code>201</code>, <code>400</code>, <code>404</code>, and <code>500</code>?</li>
+    <li>How would you validate a request body before saving it?</li>
+    <li>How would you prevent duplicate records from being added?</li>
+    <li>How would you add <code>PUT</code>, <code>PATCH</code>, and <code>DELETE</code> endpoints to your current API?</li>
+    <li>Why is it useful to separate API route logic into handler functions?</li>
+    <li>What are some limitations of manually creating REST APIs with only the native <code>http</code> module?</li>
+  </ol>
+
+  <h2>5. Static File Serving <span class="badge">Intermediate</span></h2>
+  <ol>
+    <li>What does a static file server do?</li>
+    <li>How does your <code>baseDirectory()</code> or <code>serveStatic()</code> utility find files inside the <code>public</code> folder?</li>
+    <li>Why do you serve <code>index.html</code> when the request URL is <code>/</code>?</li>
+    <li>Why do you need <code>path.join()</code> when working with file paths?</li>
+    <li>What is a MIME type, and why is it important?</li>
+    <li>How does your <code>getContentType()</code> helper decide whether a file is HTML, CSS, JS, JSON, PNG, or JPG?</li>
+    <li>What happens if a requested static file does not exist?</li>
+    <li>Why did you create a custom <code>404.html</code> page?</li>
+    <li>What could go wrong if user input is used directly to build file paths?</li>
+    <li>How could you improve your static file server for security and caching?</li>
+  </ol>
+
+  <h2>6. File System and JSON Persistence <span class="badge">Intermediate</span></h2>
+  <ol>
+    <li>What is the difference between synchronous and asynchronous file-system methods?</li>
+    <li>Why did you use <code>fs/promises</code> instead of callback-based <code>fs</code> methods?</li>
+    <li>How does your <code>getData()</code> function read and parse JSON data?</li>
+    <li>What happens if <code>data.json</code> is empty or contains invalid JSON?</li>
+    <li>How does your <code>addNewData()</code> function append a new object to the existing JSON array?</li>
+    <li>Why do you need <code>JSON.parse()</code> and <code>JSON.stringify()</code>?</li>
+    <li>What are the risks of using a JSON file as a database?</li>
+    <li>What could happen if two users submit data at the same time?</li>
+    <li>How would you improve file-based persistence for larger data?</li>
+    <li>When should you move from JSON file storage to a real database?</li>
+  </ol>
+
+  <h2>7. Request Body Parsing <span class="badge">Intermediate</span></h2>
+  <ol>
+    <li>Why does Node.js receive the request body in chunks?</li>
+    <li>How does <code>for await (const chunk of req)</code> work?</li>
+    <li>Why did you collect chunks into a <code>body</code> string before parsing?</li>
+    <li>What does <code>JSON.parse(body)</code> do?</li>
+    <li>What error should be returned when the body contains invalid JSON?</li>
+    <li>Why should a production API limit the maximum body size?</li>
+    <li>How does body parsing become easier when using Express middleware?</li>
+    <li>How would you support form data instead of JSON?</li>
+  </ol>
+
+  <h2>8. Event Emitters <span class="badge">Intermediate</span></h2>
+  <ol>
+    <li>What is an <code>EventEmitter</code> in Node.js?</li>
+    <li>What is the difference between registering a listener with <code>.on()</code> and triggering an event with <code>.emit()</code>?</li>
+    <li>In your event emitter example, what happens after the <code>setTimeout()</code> finishes?</li>
+    <li>Can one event have multiple listeners? What order do they run in?</li>
+    <li>What is a real-world use case for event emitters in backend applications?</li>
+    <li>How are event emitters related to asynchronous programming?</li>
+    <li>What is the difference between <code>.on()</code> and <code>.once()</code>?</li>
+    <li>How would you handle errors emitted by an event emitter?</li>
+  </ol>
+
+  <h2>9. MongoDB and Environment Variables <span class="badge">Intermediate to Advanced</span></h2>
+  <ol>
+    <li>Why do backend applications use databases instead of only JSON files?</li>
+    <li>What is MongoDB?</li>
+    <li>What is Mongoose, and why is it useful?</li>
+    <li>Why did you put database connection logic inside a separate <code>config/db.js</code> file?</li>
+    <li>What does <code>mongoose.connect(process.env.MONGO_URI)</code> do?</li>
+    <li>Why should database URLs be stored in environment variables?</li>
+    <li>What does <code>dotenv.config()</code> do?</li>
+    <li>Why should <code>.env</code> usually be added to <code>.gitignore</code>?</li>
+    <li>Why does your server wait for <code>connectDB()</code> before calling <code>server.listen()</code>?</li>
+    <li>What should happen if the database connection fails?</li>
+  </ol>
+
+  <h2>10. Error Handling and Debugging <span class="badge">Advanced</span></h2>
+  <ol>
+    <li>Why should asynchronous code be wrapped in <code>try/catch</code>?</li>
+    <li>What is the difference between operational errors and programming errors?</li>
+    <li>How would you debug a route that always returns 404?</li>
+    <li>How would you debug a JSON file that is not saving new data?</li>
+    <li>How would you debug a static CSS file that is not loading in the browser?</li>
+    <li>Why should internal error messages not always be sent directly to the client?</li>
+    <li>How would you add logging to your server?</li>
+    <li>How would you test your <code>GET /api</code> and <code>POST /api</code> endpoints?</li>
+    <li>What tools can be used to test APIs?</li>
+    <li>How would you organize tests for utility functions like <code>getContentType()</code> and <code>filterQueryParams()</code>?</li>
+  </ol>
+
+  <h2>11. Security and Production Thinking <span class="badge">Advanced</span></h2>
+  <ol>
+    <li>Why should user input be validated and sanitized?</li>
+    <li>What problem does <code>sanitize-html</code> help solve?</li>
+    <li>What is cross-site scripting, also known as XSS?</li>
+    <li>How could unsafe file paths lead to path traversal attacks?</li>
+    <li>How would you prevent access to files outside the <code>public</code> directory?</li>
+    <li>Why should APIs avoid accepting unlimited request body sizes?</li>
+    <li>What is CORS, and when might your API need it?</li>
+    <li>What headers would you add to improve basic security?</li>
+    <li>Why is input validation important before writing to a file or database?</li>
+    <li>What changes would you make before deploying this app publicly?</li>
+  </ol>
+
+  <h2>12. Architecture and Code Quality <span class="badge">Advanced</span></h2>
+  <ol>
+    <li>Why is it better to separate server setup, route handlers, and utility functions?</li>
+    <li>How does modular code make debugging easier?</li>
+    <li>What is single responsibility principle? Give an example from your utilities.</li>
+    <li>How would you refactor repeated response-sending logic?</li>
+    <li>How would you structure the project if it grew into a larger backend application?</li>
+    <li>When would you choose Express.js instead of only the native <code>http</code> module?</li>
+    <li>What middleware would you add in an Express version of this app?</li>
+    <li>How would you design a service layer between route handlers and data storage?</li>
+    <li>How would you make your API easier for frontend developers to consume?</li>
+    <li>How would you document this API for other developers?</li>
+  </ol>
+
+  <h2>13. Project-Based Interview Questions <span class="badge">Tell me about your work</span></h2>
+  <ol>
+    <li>Explain your <code>complete_node_js</code> project from start to finish.</li>
+    <li>Why did you first build APIs with the native <code>http</code> module instead of directly using Express?</li>
+    <li>Explain the request flow for <code>GET /api?country=India</code>.</li>
+    <li>Explain the request flow for submitting a new ghost encounter using <code>POST /api</code>.</li>
+    <li>How does your app decide whether to serve an API response or a static file?</li>
+    <li>What was the most important thing you learned while building route handlers manually?</li>
+    <li>What problem did you solve by creating helper functions like <code>sendResponse()</code> and <code>getContentType()</code>?</li>
+    <li>What is one bug you faced or could face in this project, and how would you fix it?</li>
+    <li>How would you convert your JSON-file backend into a MongoDB-backed backend?</li>
+    <li>What are the next features you would add to make this project production-ready?</li>
+  </ol>
+
+  <h2>14. Quick Answer Hints</h2>
+  <div class="section">
+    <h3>How to explain your project in an interview</h3>
+    <p class="answer">"I built a Node.js backend using the native HTTP module to understand server fundamentals. The project handles REST API routes, query parameters, static file serving, JSON request bodies, file-based persistence, event emitters, and MongoDB connection setup. I separated logic into route handlers and utilities so the code is easier to maintain."</p>
+  </div>
+  <div class="section">
+    <h3>Most important topics to revise</h3>
+    <p class="answer">HTTP request-response flow, routing, status codes, MIME types, asynchronous file I/O, JSON parsing, event emitters, environment variables, MongoDB connection flow, and error handling.</p>
+  </div>
+  <div class="section">
+    <h3>Best short project pitch</h3>
+    <p class="answer">"This repository shows my Node.js backend learning path: starting with custom HTTP servers and manual routing, then building REST APIs, static file serving, JSON persistence, event-driven code, and MongoDB connection basics."</p>
+  </div>
+</body>
+</html>

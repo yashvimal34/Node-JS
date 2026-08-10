@@ -1,0 +1,234 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 3512 >>
+stream
+BT /F1 10.5 Tf 46 760 Td (Node.js Interview Questions - Basic to Advanced) Tj ET
+BT /F1 24 Tf 46 741.5 Td (Node.js Interview Questions) Tj ET
+BT /F1 10.5 Tf 46 702.5 Td (Basic to advanced questions based on the complete_node_js learning projects.) Tj ET
+BT /F1 10.5 Tf 46 684 Td (Projects covered: Core Node.js HTTP server, REST API routing, query parameters, static file) Tj ET
+BT /F1 10.5 Tf 46 670.5 Td (serving, JSON body parsing, file-system persistence, event emitters, environment variables,) Tj ET
+BT /F1 10.5 Tf 46 657 Td (and MongoDB/Mongoose connection.) Tj ET
+BT /F1 15 Tf 46 632.5 Td (1. Basic Node.js Fundamentals [Beginner]) Tj ET
+BT /F1 10.5 Tf 58 604.5 Td (- What is Node.js, and why is it used for backend development?) Tj ET
+BT /F1 10.5 Tf 58 587 Td (- What is the difference between JavaScript running in the browser and JavaScript running in) Tj ET
+BT /F1 10.5 Tf 58 573.5 Td (  Node.js?) Tj ET
+BT /F1 10.5 Tf 58 556 Td (- What are Node.js core modules? Give examples from your project.) Tj ET
+BT /F1 10.5 Tf 58 538.5 Td (- Why did you import modules like node:http, node:path, node:fs/promises, and node:events?) Tj ET
+BT /F1 10.5 Tf 58 521 Td (- What is the purpose of package.json in a Node.js project?) Tj ET
+BT /F1 10.5 Tf 58 503.5 Td (- Why did you use "type": "module" in your package file?) Tj ET
+BT /F1 10.5 Tf 58 486 Td (- What is the difference between CommonJS and ES Modules?) Tj ET
+BT /F1 10.5 Tf 58 468.5 Td (- What does npm start do in your projects?) Tj ET
+BT /F1 10.5 Tf 58 451 Td (- What is the use of node --watch server.js during development?) Tj ET
+BT /F1 10.5 Tf 58 433.5 Td (- What is a callback function? Where do you see callback-style behavior in Node.js?) Tj ET
+BT /F1 15 Tf 46 410 Td (2. HTTP Server and Request Handling [Beginner to Intermediate]) Tj ET
+BT /F1 10.5 Tf 58 382 Td (- How do you create a server using the native http module?) Tj ET
+BT /F1 10.5 Tf 58 364.5 Td (- What are req and res in http.createServer\(\)?) Tj ET
+BT /F1 10.5 Tf 58 347 Td (- What happens when the browser sends a request to localhost:8000?) Tj ET
+BT /F1 10.5 Tf 58 329.5 Td (- Why does the server need to call res.end\(\)?) Tj ET
+BT /F1 10.5 Tf 58 312 Td (- What is the purpose of server.listen\(PORT\)?) Tj ET
+BT /F1 10.5 Tf 58 294.5 Td (- How do you set the HTTP status code in Node.js?) Tj ET
+BT /F1 10.5 Tf 58 277 Td (- How do you set response headers such as Content-Type?) Tj ET
+BT /F1 10.5 Tf 58 259.5 Td (- What is the difference between sending plain text, JSON, HTML, CSS, and image responses?) Tj ET
+BT /F1 10.5 Tf 58 242 Td (- Why should a route return a 404 response when no route matches?) Tj ET
+BT /F1 10.5 Tf 58 224.5 Td (- How would you explain your sendResponse\(\) or sendJSON\(\) helper?) Tj ET
+BT /F1 15 Tf 46 201 Td (3. Routing and URL Handling [Intermediate]) Tj ET
+BT /F1 10.5 Tf 58 173 Td (- How did you manually implement routing without Express?) Tj ET
+BT /F1 10.5 Tf 58 155.5 Td (- What is the difference between req.url and a parsed URL object?) Tj ET
+BT /F1 10.5 Tf 58 138 Td (- Why did you create new URL\(req.url, baseUrl\)?) Tj ET
+BT /F1 10.5 Tf 58 120.5 Td (- What is the difference between pathname and query parameters?) Tj ET
+BT /F1 10.5 Tf 58 103 Td (- How does Object.fromEntries\(url.searchParams\) help with filtering?) Tj ET
+BT /F1 10.5 Tf 58 85.5 Td (- How did you handle routes like /api/country/:country or /api/name/:name?) Tj ET
+BT /F1 10.5 Tf 58 68 Td (- Why did you use decodeURIComponent\(\) for route values with spaces?) Tj ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 3514 >>
+stream
+BT /F1 10.5 Tf 58 760 Td (- What is the difference between path parameters and query parameters?) Tj ET
+BT /F1 10.5 Tf 58 742.5 Td (- When should you use /api/country/India versus /api?country=India?) Tj ET
+BT /F1 10.5 Tf 58 725 Td (- How would you add a new route such as /api/continent/:continent?) Tj ET
+BT /F1 15 Tf 46 701.5 Td (4. REST API Concepts [Intermediate]) Tj ET
+BT /F1 10.5 Tf 58 673.5 Td (- What is a REST API?) Tj ET
+BT /F1 10.5 Tf 58 656 Td (- What is the purpose of your GET /api route?) Tj ET
+BT /F1 10.5 Tf 58 638.5 Td (- What is the purpose of your POST /api route?) Tj ET
+BT /F1 10.5 Tf 58 621 Td (- Why should POST usually return status code 201 when data is created?) Tj ET
+BT /F1 10.5 Tf 58 603.5 Td (- What is the difference between 200, 201, 400, 404, and 500?) Tj ET
+BT /F1 10.5 Tf 58 586 Td (- How would you validate a request body before saving it?) Tj ET
+BT /F1 10.5 Tf 58 568.5 Td (- How would you prevent duplicate records from being added?) Tj ET
+BT /F1 10.5 Tf 58 551 Td (- How would you add PUT, PATCH, and DELETE endpoints to your current API?) Tj ET
+BT /F1 10.5 Tf 58 533.5 Td (- Why is it useful to separate API route logic into handler functions?) Tj ET
+BT /F1 10.5 Tf 58 516 Td (- What are some limitations of manually creating REST APIs with only the native http module?) Tj ET
+BT /F1 15 Tf 46 492.5 Td (5. Static File Serving [Intermediate]) Tj ET
+BT /F1 10.5 Tf 58 464.5 Td (- What does a static file server do?) Tj ET
+BT /F1 10.5 Tf 58 447 Td (- How does your baseDirectory\(\) or serveStatic\(\) utility find files inside the public folder?) Tj ET
+BT /F1 10.5 Tf 58 429.5 Td (- Why do you serve index.html when the request URL is /?) Tj ET
+BT /F1 10.5 Tf 58 412 Td (- Why do you need path.join\(\) when working with file paths?) Tj ET
+BT /F1 10.5 Tf 58 394.5 Td (- What is a MIME type, and why is it important?) Tj ET
+BT /F1 10.5 Tf 58 377 Td (- How does your getContentType\(\) helper decide whether a file is HTML, CSS, JS, JSON, PNG, or) Tj ET
+BT /F1 10.5 Tf 58 363.5 Td (  JPG?) Tj ET
+BT /F1 10.5 Tf 58 346 Td (- What happens if a requested static file does not exist?) Tj ET
+BT /F1 10.5 Tf 58 328.5 Td (- Why did you create a custom 404.html page?) Tj ET
+BT /F1 10.5 Tf 58 311 Td (- What could go wrong if user input is used directly to build file paths?) Tj ET
+BT /F1 10.5 Tf 58 293.5 Td (- How could you improve your static file server for security and caching?) Tj ET
+BT /F1 15 Tf 46 270 Td (6. File System and JSON Persistence [Intermediate]) Tj ET
+BT /F1 10.5 Tf 58 242 Td (- What is the difference between synchronous and asynchronous file-system methods?) Tj ET
+BT /F1 10.5 Tf 58 224.5 Td (- Why did you use fs/promises instead of callback-based fs methods?) Tj ET
+BT /F1 10.5 Tf 58 207 Td (- How does your getData\(\) function read and parse JSON data?) Tj ET
+BT /F1 10.5 Tf 58 189.5 Td (- What happens if data.json is empty or contains invalid JSON?) Tj ET
+BT /F1 10.5 Tf 58 172 Td (- How does your addNewData\(\) function append a new object to the existing JSON array?) Tj ET
+BT /F1 10.5 Tf 58 154.5 Td (- Why do you need JSON.parse\(\) and JSON.stringify\(\)?) Tj ET
+BT /F1 10.5 Tf 58 137 Td (- What are the risks of using a JSON file as a database?) Tj ET
+BT /F1 10.5 Tf 58 119.5 Td (- What could happen if two users submit data at the same time?) Tj ET
+BT /F1 10.5 Tf 58 102 Td (- How would you improve file-based persistence for larger data?) Tj ET
+BT /F1 10.5 Tf 58 84.5 Td (- When should you move from JSON file storage to a real database?) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 3389 >>
+stream
+BT /F1 15 Tf 46 760 Td (7. Request Body Parsing [Intermediate]) Tj ET
+BT /F1 10.5 Tf 58 732 Td (- Why does Node.js receive the request body in chunks?) Tj ET
+BT /F1 10.5 Tf 58 714.5 Td (- How does for await \(const chunk of req\) work?) Tj ET
+BT /F1 10.5 Tf 58 697 Td (- Why did you collect chunks into a body string before parsing?) Tj ET
+BT /F1 10.5 Tf 58 679.5 Td (- What does JSON.parse\(body\) do?) Tj ET
+BT /F1 10.5 Tf 58 662 Td (- What error should be returned when the body contains invalid JSON?) Tj ET
+BT /F1 10.5 Tf 58 644.5 Td (- Why should a production API limit the maximum body size?) Tj ET
+BT /F1 10.5 Tf 58 627 Td (- How does body parsing become easier when using Express middleware?) Tj ET
+BT /F1 10.5 Tf 58 609.5 Td (- How would you support form data instead of JSON?) Tj ET
+BT /F1 15 Tf 46 586 Td (8. Event Emitters [Intermediate]) Tj ET
+BT /F1 10.5 Tf 58 558 Td (- What is an EventEmitter in Node.js?) Tj ET
+BT /F1 10.5 Tf 58 540.5 Td (- What is the difference between registering a listener with .on\(\) and triggering an event) Tj ET
+BT /F1 10.5 Tf 58 527 Td (  with .emit\(\)?) Tj ET
+BT /F1 10.5 Tf 58 509.5 Td (- In your event emitter example, what happens after the setTimeout\(\) finishes?) Tj ET
+BT /F1 10.5 Tf 58 492 Td (- Can one event have multiple listeners? What order do they run in?) Tj ET
+BT /F1 10.5 Tf 58 474.5 Td (- What is a real-world use case for event emitters in backend applications?) Tj ET
+BT /F1 10.5 Tf 58 457 Td (- How are event emitters related to asynchronous programming?) Tj ET
+BT /F1 10.5 Tf 58 439.5 Td (- What is the difference between .on\(\) and .once\(\)?) Tj ET
+BT /F1 10.5 Tf 58 422 Td (- How would you handle errors emitted by an event emitter?) Tj ET
+BT /F1 15 Tf 46 398.5 Td (9. MongoDB and Environment Variables [Intermediate to Advanced]) Tj ET
+BT /F1 10.5 Tf 58 370.5 Td (- Why do backend applications use databases instead of only JSON files?) Tj ET
+BT /F1 10.5 Tf 58 353 Td (- What is MongoDB?) Tj ET
+BT /F1 10.5 Tf 58 335.5 Td (- What is Mongoose, and why is it useful?) Tj ET
+BT /F1 10.5 Tf 58 318 Td (- Why did you put database connection logic inside a separate config/db.js file?) Tj ET
+BT /F1 10.5 Tf 58 300.5 Td (- What does mongoose.connect\(process.env.MONGO_URI\) do?) Tj ET
+BT /F1 10.5 Tf 58 283 Td (- Why should database URLs be stored in environment variables?) Tj ET
+BT /F1 10.5 Tf 58 265.5 Td (- What does dotenv.config\(\) do?) Tj ET
+BT /F1 10.5 Tf 58 248 Td (- Why should .env usually be added to .gitignore?) Tj ET
+BT /F1 10.5 Tf 58 230.5 Td (- Why does your server wait for connectDB\(\) before calling server.listen\(\)?) Tj ET
+BT /F1 10.5 Tf 58 213 Td (- What should happen if the database connection fails?) Tj ET
+BT /F1 15 Tf 46 189.5 Td (10. Error Handling and Debugging [Advanced]) Tj ET
+BT /F1 10.5 Tf 58 161.5 Td (- Why should asynchronous code be wrapped in try/catch?) Tj ET
+BT /F1 10.5 Tf 58 144 Td (- What is the difference between operational errors and programming errors?) Tj ET
+BT /F1 10.5 Tf 58 126.5 Td (- How would you debug a route that always returns 404?) Tj ET
+BT /F1 10.5 Tf 58 109 Td (- How would you debug a JSON file that is not saving new data?) Tj ET
+BT /F1 10.5 Tf 58 91.5 Td (- How would you debug a static CSS file that is not loading in the browser?) Tj ET
+BT /F1 10.5 Tf 58 74 Td (- Why should internal error messages not always be sent directly to the client?) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 3712 >>
+stream
+BT /F1 10.5 Tf 58 760 Td (- How would you add logging to your server?) Tj ET
+BT /F1 10.5 Tf 58 742.5 Td (- How would you test your GET /api and POST /api endpoints?) Tj ET
+BT /F1 10.5 Tf 58 725 Td (- What tools can be used to test APIs?) Tj ET
+BT /F1 10.5 Tf 58 707.5 Td (- How would you organize tests for utility functions like getContentType\(\) and) Tj ET
+BT /F1 10.5 Tf 58 694 Td (  filterQueryParams\(\)?) Tj ET
+BT /F1 15 Tf 46 670.5 Td (11. Security and Production Thinking [Advanced]) Tj ET
+BT /F1 10.5 Tf 58 642.5 Td (- Why should user input be validated and sanitized?) Tj ET
+BT /F1 10.5 Tf 58 625 Td (- What problem does sanitize-html help solve?) Tj ET
+BT /F1 10.5 Tf 58 607.5 Td (- What is cross-site scripting, also known as XSS?) Tj ET
+BT /F1 10.5 Tf 58 590 Td (- How could unsafe file paths lead to path traversal attacks?) Tj ET
+BT /F1 10.5 Tf 58 572.5 Td (- How would you prevent access to files outside the public directory?) Tj ET
+BT /F1 10.5 Tf 58 555 Td (- Why should APIs avoid accepting unlimited request body sizes?) Tj ET
+BT /F1 10.5 Tf 58 537.5 Td (- What is CORS, and when might your API need it?) Tj ET
+BT /F1 10.5 Tf 58 520 Td (- What headers would you add to improve basic security?) Tj ET
+BT /F1 10.5 Tf 58 502.5 Td (- Why is input validation important before writing to a file or database?) Tj ET
+BT /F1 10.5 Tf 58 485 Td (- What changes would you make before deploying this app publicly?) Tj ET
+BT /F1 15 Tf 46 461.5 Td (12. Architecture and Code Quality [Advanced]) Tj ET
+BT /F1 10.5 Tf 58 433.5 Td (- Why is it better to separate server setup, route handlers, and utility functions?) Tj ET
+BT /F1 10.5 Tf 58 416 Td (- How does modular code make debugging easier?) Tj ET
+BT /F1 10.5 Tf 58 398.5 Td (- What is single responsibility principle? Give an example from your utilities.) Tj ET
+BT /F1 10.5 Tf 58 381 Td (- How would you refactor repeated response-sending logic?) Tj ET
+BT /F1 10.5 Tf 58 363.5 Td (- How would you structure the project if it grew into a larger backend application?) Tj ET
+BT /F1 10.5 Tf 58 346 Td (- When would you choose Express.js instead of only the native http module?) Tj ET
+BT /F1 10.5 Tf 58 328.5 Td (- What middleware would you add in an Express version of this app?) Tj ET
+BT /F1 10.5 Tf 58 311 Td (- How would you design a service layer between route handlers and data storage?) Tj ET
+BT /F1 10.5 Tf 58 293.5 Td (- How would you make your API easier for frontend developers to consume?) Tj ET
+BT /F1 10.5 Tf 58 276 Td (- How would you document this API for other developers?) Tj ET
+BT /F1 15 Tf 46 252.5 Td (13. Project-Based Interview Questions [Tell me about your work]) Tj ET
+BT /F1 10.5 Tf 58 224.5 Td (- Explain your complete_node_js project from start to finish.) Tj ET
+BT /F1 10.5 Tf 58 207 Td (- Why did you first build APIs with the native http module instead of directly using Express?) Tj ET
+BT /F1 10.5 Tf 58 189.5 Td (- Explain the request flow for GET /api?country=India.) Tj ET
+BT /F1 10.5 Tf 58 172 Td (- Explain the request flow for submitting a new ghost encounter using POST /api.) Tj ET
+BT /F1 10.5 Tf 58 154.5 Td (- How does your app decide whether to serve an API response or a static file?) Tj ET
+BT /F1 10.5 Tf 58 137 Td (- What was the most important thing you learned while building route handlers manually?) Tj ET
+BT /F1 10.5 Tf 58 119.5 Td (- What problem did you solve by creating helper functions like sendResponse\(\) and) Tj ET
+BT /F1 10.5 Tf 58 106 Td (  getContentType\(\)?) Tj ET
+BT /F1 10.5 Tf 58 88.5 Td (- What is one bug you faced or could face in this project, and how would you fix it?) Tj ET
+BT /F1 10.5 Tf 58 71 Td (- How would you convert your JSON-file backend into a MongoDB-backed backend?) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 1433 >>
+stream
+BT /F1 10.5 Tf 58 760 Td (- What are the next features you would add to make this project production-ready?) Tj ET
+BT /F1 15 Tf 46 736.5 Td (14. Quick Answer Hints) Tj ET
+BT /F1 12 Tf 46 708.5 Td (How to explain your project in an interview) Tj ET
+BT /F1 10.5 Tf 46 686.5 Td ("I built a Node.js backend using the native HTTP module to understand server fundamentals.) Tj ET
+BT /F1 10.5 Tf 46 673 Td (The project handles REST API routes, query parameters, static file serving, JSON request) Tj ET
+BT /F1 10.5 Tf 46 659.5 Td (bodies, file-based persistence, event emitters, and MongoDB connection setup. I separated) Tj ET
+BT /F1 10.5 Tf 46 646 Td (logic into route handlers and utilities so the code is easier to maintain.") Tj ET
+BT /F1 12 Tf 46 627.5 Td (Most important topics to revise) Tj ET
+BT /F1 10.5 Tf 46 605.5 Td (HTTP request-response flow, routing, status codes, MIME types, asynchronous file I/O, JSON) Tj ET
+BT /F1 10.5 Tf 46 592 Td (parsing, event emitters, environment variables, MongoDB connection flow, and error handling.) Tj ET
+BT /F1 12 Tf 46 573.5 Td (Best short project pitch) Tj ET
+BT /F1 10.5 Tf 46 551.5 Td ("This repository shows my Node.js backend learning path: starting with custom HTTP servers) Tj ET
+BT /F1 10.5 Tf 46 538 Td (and manual routing, then building REST APIs, static file serving, JSON persistence,) Tj ET
+BT /F1 10.5 Tf 46 524.5 Td (event-driven code, and MongoDB connection basics.") Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R] /Count 5 >>
+endobj
+13 0 obj
+<< /Type /Catalog /Pages 12 0 R >>
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000003643 00000 n 
+0000003770 00000 n 
+0000007336 00000 n 
+0000007463 00000 n 
+0000010904 00000 n 
+0000011031 00000 n 
+0000014795 00000 n 
+0000014922 00000 n 
+0000016408 00000 n 
+0000016537 00000 n 
+0000016620 00000 n 
+trailer
+<< /Size 14 /Root 13 0 R >>
+startxref
+16671
+%%EOF
